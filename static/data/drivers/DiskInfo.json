@@ -1,0 +1,34 @@
+{
+    "totalRecords": 4,
+    "curPage" : 1,
+    "data": [
+        {
+            "name": "Disk-1",
+            "Size": "10000GB",
+            "Status": "Foreign",
+            "vendor": "ST1000DM003-1ER1CC45",
+            "volume": "Unassigned"
+        }, 
+        {
+                "name": "DISK2",
+                "size": "1000GB",
+                "status": "Foreign",
+                "vendor": "ST1000DM003-1ER1CC45",
+                "volume": "Unassigned"
+        },
+        {
+                "name": "DISK3",
+                "size": "1000GB",
+                "status": "Normal",
+                "vendor": "ST1000DM003-1ER1CC45",
+                "volume": "Unassigned"
+        },
+        {
+                "name": "DISK4",
+                "size": "1000GB",
+                "status": "Normal",
+                "vendor": "ST1000DM003-1ER1CC45",
+                "volume": "Unassigned"
+        }
+    ]
+}

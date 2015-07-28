@@ -1,0 +1,46 @@
+import os
+from django.db import models
+from django.contrib.auth.models import User
+from datetime import date
+
+# Create your models here.
+
+class UserProfile(models.Model):
+	user = models.ForeignKey(User, unique=True)
+	full_name = models.CharField(max_length=200)
+	password = models.CharField(max_length=200)
+	email = models.CharField(max_length=255)
+	role = models.CharField(max_length=100)
+	created_date = models.DateTimeField(auto_now_add=True, blank=True)
+	
+	def __unicode__(self):
+		return u'%s' % (self.user)
+
+
+class DiskInfo(models.Model):
+	emp_personal_info_row_id = models.AutoField(primary_key=True)
+	emp_cr_row_id = models.ForeignKey(EmployeeCredentials)
+	employee_code = models.CharField(max_length=255,  unique=True)
+	location = models.TextField(null=True, blank=True)
+	office_location = models.TextField(null=True, blank=True)
+	total_experience = models.IntegerField(null=True, blank=True)
+	id_proof_document = models.CharField(max_length=255, null=True, blank=True)
+	passport_number = models.CharField(max_length=255, null=True, blank=True)
+	passport_issued = models.DateTimeField(null=True, blank=True)
+	gender = models.CharField(max_length=2)
+	fathers_name = models.CharField(max_length=200, null=True, blank=True)
+	mothers_name = models.CharField(max_length=200, null=True, blank=True)
+	department = models.CharField(max_length=200, null=True, blank=True)
+	customer_name = models.CharField(max_length=200, null=True, blank=True)
+	band = models.CharField(max_length=20, null=True, blank=True)
+	relevant_experience = models.IntegerField(null=True, blank=True)
+	name_in_passport = models.CharField(max_length=200, null=True, blank=True)
+	blood_group = models.CharField(max_length=10, null=True, blank=True)
+	expiry_date = models.DateTimeField(null=True, blank=True)
+	date_of_birth = models.DateTimeField(null=True, blank=True)
+	created_date = models.DateTimeField()
+	updated_date = models.DateTimeField()
+
+	def __unicode__(self):
+		return u'%d' % (self.emp_personal_info_row_id)
+

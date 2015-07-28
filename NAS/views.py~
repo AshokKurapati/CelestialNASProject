@@ -1,0 +1,272 @@
+from django.shortcuts import render, render_to_response
+from django.http import HttpResponse
+from django.http import HttpResponseRedirect
+from models import *
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.contrib.auth import logout
+# Create your views here.
+import subprocess, re,sys
+from django.http import HttpResponse
+from django.template import Context, loader
+import json
+from django.template import RequestContext
+from django.core.context_processors import csrf
+from django.views.decorators.csrf import csrf_exempt
+#from django.views.decorators.csrf import requires_csrf_exempt
+#from django.template.context_processors import csrf
+
+def userlogin(request):
+	#latest_poll_list = Poll.objects.all().order_by('-pub_date')[:5]
+	#entry = UserProfile.objects.get(pk=1)
+	context = ""
+	return render(request, 'index.html', context)
+	
+def dashboard(request):
+	username = request.POST['username']
+	password = request.POST['password']
+	
+	user = authenticate(username=username, password=password)
+	context = ""
+	if user:
+		login(request, user)
+		return HttpResponseRedirect("/dashboardview")
+		
+	else:
+		messages.error(request, "Invalid login credentials!")
+		return HttpResponseRedirect("/")
+		return render(request, '/filesharing.html', context)
+		
+
+def dashboardview(request):
+	context = ""
+	return render(request, 'filesharing.html', context)
+
+def drives(request):
+	context = ""
+	return render(request, 'drives.html', context)
+
+
+def filesharing(request):
+	context = ""
+	return render(request, 'filesharing.html', context)
+
+
+#start frm here.	
+"""
+def raid_list(request):
+      cd=['sudo','./interface','-D']
+      p = subprocess.Popen(cd, stdout = subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            stdin=subprocess.PIPE)
+      print "PPPPPPPP",p
+
+      line,err = p.communicate()
+      #line = list(line.split())
+      #line = re.sub('{','[', line.rstrip())
+      #line = re.sub('}',']',line.rstrip())
+      #line = re.sub('],','],',line.rstrip())
+      b_string=""
+      flag =0
+      for c in reversed(line):
+      	if (flag == 0 and c ==","): 
+        # b_string = b_string+c
+        	flag =flag+1 
+     	else:
+        	b_string = b_string+c
+      st = ""
+      for a in reversed(b_string): 
+      	st = st+a 
+      print st
+#d = reversed(b_string)
+#print b_string
+#print(d)
+      disk = json.loads(st)
+      print disk
+      #print disk.items()
+      for d in disk.items():
+      	print type(d) 
+      #print "LLLLLLLLLine", line
+      #print type(line)
+      #li = line.split("],")
+      #for l in li:
+       #   print l
+	#  print "aaaaaaaa"
+      #context = ""
+      context = RequestContext(request)
+      #return render(request, 'share/raidtemplate.html', context )
+      #return render_to_response('share/raidtemplate.html',
+                         # line,
+                         # context_instance=RequestContext(request))
+      return render_to_response('share/raidtemplate.html', disk,context_instance=RequestContext(request))
+
+      return render_to_response('bookmarks/bookmark_detail.html', {'title': line, 'title': d},context_instance=RequestContext(request))
+"""
+def data_disk(request):
+      cd=['sudo','./interface','-D']
+      p = subprocess.Popen(cd, stdout = subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            stdin=subprocess.PIPE)
+      print "PPPPPPPP",p
+      line,err = p.communicate()
+      b_string=""
+      flag =0
+      for c in reversed(line):
+      	if (flag == 0 and c ==","): 
+        # b_string = b_string+c
+          flag =flag+1
+        else:
+     		   b_string = b_string+c
+      st = ""
+      for a in reversed(b_string):
+      	st = st+a
+      count = st.count('{')
+      #print cou
+      st = '''{
+    "totalRecords":'''+str(count)+''',
+    "curPage" : 1,
+    "data": [''' + st +"""]
+}"""
+      print st
+#d = reversed(b_string)
+#print b_string
+#print(d)
+      d = json.dumps(st)
+      print d
+      return HttpResponse(st,content_type="application/type")
+
+def data_volume(request):
+      cd=['sudo','./interface','-V']
+      p = subprocess.Popen(cd, stdout = subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            stdin=subprocess.PIPE)
+      print "PPPPPPPP",p
+      line,err = p.communicate()
+      b_string=""
+      flag =0
+      for c in reversed(line):
+        if (flag == 0 and c ==","): 
+        # b_string = b_string+c
+          flag =flag+1
+        else:
+           b_string = b_string+c
+      st = ""
+      for a in reversed(b_string):
+        st = st+a
+      count = st.count('{')
+      #print cou
+      st = '''{
+    "totalRecords":'''+str(count)+''',
+    "curPage" : 1,
+    "data": [''' + st +"""]
+}"""
+      print st
+#d = reversed(b_string)
+#print b_string
+#print(d)
+      d = json.dumps(st)
+      print d
+      return HttpResponse(st,content_type="application/type")
+
+def applications(request):
+	return render_to_response("applications.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+
+def backup(request):
+	return render_to_response("backup.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+def services(request):
+	return render_to_response("services.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+
+def webservices(request):
+	return render_to_response("webservices.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+def network(request):
+	return render_to_response("network.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+
+def management(request):
+	return render_to_response("management.html",
+                              locals(),
+                              context_instance= RequestContext(request))
+def no_disks(request):
+      cd=['sudo','./interface','-D']
+      p = subprocess.Popen(cd, stdout = subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            stdin=subprocess.PIPE)
+      print "PPPPPPPP",p
+      line,err = p.communicate()
+      b_string=""
+      flag =0
+      for c in reversed(line):
+        if (flag == 0 and c ==","): 
+        # b_string = b_string+c
+          flag =flag+1
+        else:
+           b_string = b_string+c
+      st = ""
+      for a in reversed(b_string):
+        st = st+a
+      count = st.count('{')
+      #print cou
+      st ='''{ "count":'''+str(count)+'''} ''';
+      print st;
+  
+#d = reversed(b_string)
+#print b_string
+#print(d)
+      d = json.dumps(st)
+      print d
+      return HttpResponse(st,content_type="application/type")
+
+@csrf_exempt
+def create_volume(request):
+  c = {}
+  c.update(csrf(request));
+
+  #Name = str(request.POST['vol_name'])
+  #print "NNNNNNNNNNNNNN", Name
+  #return render_to_response("",c);
+  data = request.POST["vol_name"]
+  print "DATA", data
+  #data = str(data)
+  response_data = {}
+  print "RESPONSE DATA", response_data
+  response_data['msg'] = data;
+  print "RESPONSE_DATA[mmgggggggg]", response_data['msg']
+  print(type(data))
+  print "volume detailsssss", response_data['msg']
+  print "I got called"
+  if (os.path.isfile("/tmp/vol.js")):
+    #os.system(" touch /tmp/vol.js")
+    f = open("/tmp/"+"vol.js","w")
+    f.write(data)
+    f.close()
+  else :
+    os.system(" touch /tmp/vol.js")
+    f = open("/tmp/"+"vol.js","w")
+    f.write(data)
+    f.close()
+  command = ('sudo', './interface', '-a')
+  with open('/tmp/vol.js') as input_stream:
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=input_stream)
+    stdout, stderr = p.communicate()
+    print "PRINT STDOUT", stdout
+    print "PRINT STRERR", stderr
+
+
+  return HttpResponse(json.dumps(response_data),content_type="application/type")
+
+def user_logout(request):
+	logout(request)
+	messages.error(request, "Successfully logout.")
+	# Redirect to a success page.
+	#return HttpResponseRedirect("/")
+	return render(request, 'index.html')
+

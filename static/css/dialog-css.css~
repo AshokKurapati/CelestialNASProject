@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(https://cdn.mediacru.sh/WkaUlplLEqUQ.jpg) fixed center black;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.99)
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.confirm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-width: 280px;
+  max-width: 500px;
+  height: auto;
+  background: #E2E2E2;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid white;
+  animation: fade 0s ease 0 forwards;
+  color:#666666;
+}
+.confirm h1 {
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 1.5rem 1rem 0.5rem;
+  color:#666666;
+}
+.confirm p {
+  text-align: left;
+  font-size: 0.8rem;
+  margin: 0 2rem;
+  color:#666666;
+}
+.confirm button {
+  background: transparent;
+  border: none;
+  color: #1678E5;
+  height: 3rem;
+  font-size: 1rem;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+.confirm button:nth-of-type(1) {
+  border-top: 1px solid #B4B4B4;
+  border-right: 1px solid #B4B4B4;
+  left: 0;
+  border-radius: 0 0 0 10px;
+}
+.confirm button:nth-of-type(2) {
+  border-top: 1px solid #B4B4B4;
+  right: 0;
+  border-radius: 0 0 10px 0;
+}
+.confirm button:focus,
+.confirm button:hover {
+  font-weight: bold;
+  background: #EFEFEF;
+}
+.confirm button:active {
+  background: #D6D6D6;
+}
+
+.text-input-pop
+	{
+	margin:0%;	
+	}
+	
+.text-input-pop input[type="text"] , .text-input-pop select, .text-input-pop textarea, .text-input-pop input[type="password"]
+	{
+	width:98%;
+	padding:3px 5px;
+	border:#666 1px solid;
+	font-size:12px;
+	color:#666;		
+	margin:0 0 5px 0;
+	}
+
+.text-input-pop input[type="number"]
+	{
+	width:90%;
+	padding:3px 5px;
+	border:#666 1px solid;
+	font-size:12px;
+	color:#666;		
+	margin:0 0 5px 0;
+	}
+
+.raid-disk-cont
+	{
+	margin:0 3rem;
+	padding:10px 0;
+	min-height:20px;
+	max-height:100px;
+	overflow:auto;
+	font-size:12px;
+	}
+
+	
+/*filesharing css added*/
+.body-content-modal
+{
+	min-height:200px;
+	max-height:400px;
+	overflow:auto;
+}
+	
+	
+.modal-left-cont
+	{
+	display:inline-block;
+	width:60%;		
+	}
+
+.modal-right-cont
+	{
+	display:inline-block;
+	width:38%;
+	vertical-align:top;		
+	}
+	
+.modal-table
+	{
+	font-size:12px;
+	font-weight:normal;	
+	border:1px #6C6C6C solid;	
+	}
+
+.modal-table input
+	{
+	vertical-align:middle;		
+	}
+
+.modal-table tr th
+	{
+	background-color:#6C6C6C;
+	color:#fff;	
+	padding:3px;
+	}
+	
+.modal-table tr td
+	{
+	padding:3px;
+	}

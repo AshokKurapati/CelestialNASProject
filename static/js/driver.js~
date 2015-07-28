@@ -1,0 +1,80 @@
+getDiskDetails = function(id){ 
+    debugger;
+    //var gridDom = $("#" + id);
+    var popUpContainer = $("#popup-grid");
+    
+    popUpContainer.dialog ({
+        autoOpen: false,
+        height: 500,
+        width: 500,
+        create:function(eve, ui){
+            debugger;
+        },
+        
+        open: function(eve, ui){
+            debugger;
+            var grid = $("#driver-details"), ht = grid.parent().height() - 5, wd = grid.parent().width();
+            if(grid.hasClass('pq-grid')){
+                grid = grid.destroy();
+            }
+            else{
+                grid.pqGrid({
+                    height: ht,
+                    width: wd,
+                    colModel: getDiskDetailsColumn(),
+                    dataModel: getDiskDataModel()
+                });
+            }
+        },
+        close: function(){
+            debugger;
+            $("#driver-details").pqGrid("destroy");
+        },
+        show: {
+            //effect: "blind",
+            duration: 100
+        },
+        hide: {
+            //effect: "explode",
+            duration: 100
+        }
+    }).dialog( "open" );
+    
+}
+
+getDiskDetailsColumn = function(){
+    return [
+        {
+            title: "Disk Name", width: 100, dataIndx: "name", editable: false
+        },
+        {
+            title: "Size", width: 100, dataIndx: "size", editable: false
+        },
+        {
+            title: "Status", width: 100, dataIndx: "status", editable: false
+        },
+        {
+            title: "Vendor", width: 100, dataIndx: "vendor", editable: false
+        },
+        {
+            title: "Volumes", width: 100, dataIndx: "volume", editable: false
+        }
+    ];
+}
+
+getDiskDataModel = function(){
+    return {
+        location: "remote",
+        sorting: "local",
+        dataType: "JSON",
+        method: "GET",
+        getUrl: function(){
+            return {url: '../data_disk/'}
+        },
+        getData: function (dataJSON) {
+            //var data=                
+            return { curPage: dataJSON.curPage, totalRecords: dataJSON.totalRecords, data: dataJSON.data };                
+        }
+    };
+}
+

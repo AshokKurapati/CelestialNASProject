@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Celestial NAS | Backup</title>
+    <link rel="shortcut icon" href="/static/IMG/elecom-meta-icon.png">
+    <link rel="stylesheet" type="text/css" href="/static/css/stylesheet.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/ui.switchbutton.min.css" />
+    
+		<link type="text/css" rel="stylesheet" href="/static/css/demo.css" />
+		<script type="text/javascript" src="/static/js/lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="/static/js/lib/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="/static/js/lib/jquery-ui-1.8.16.custom.min.js"></script>
+		<script type="text/javascript" src="/static/js/lib/jquery.switchbutton.min.js"></script>
+        <script type="text/javascript" src="/static/js/lib/pqgrid.min.js"></script>
+        
+		<script type="text/javascript" src="/static/js/lib/demo.js"></script>
+</head>
+
+<body>
+<div class="body-div">
+	<div class="header-div">
+    	
+    	<div class="faq" align="right">
+        	 <a href="#"><img src="/static/IMG/faq1.png"></a>
+            <a href="#"><img src="/static/IMG/infom.png"></a>
+            <a href="#"><img src="/static/IMG/login1.png"></a>
+        </div>
+      </div>
+</div>
+        <!--main content-->
+        <div class="main-body">
+        	<div class="rolling-nav">
+            	<div class="setting">
+                <a href="#"><img src="/static/IMG/setting1.png" title="Easy Admin"></a>
+                </div>
+                    <div class="tune">
+                    <a href="#"><img src="/static/IMG/tune1.png" title="Click Here and this TeraStation will beep"></a>
+                    </div>
+                    	<div class="name">
+                		<p style="font-family: Arial, sans-serif;font-size:14px;">Name : TS5200D4E1 (TS5200D)</p>
+                		</div>
+                        	<div class="admin">
+                                <a href="#"><img src="/static/IMG/admin.png">admin</a>
+                                </div>
+                                
+                                	<div class="language">
+                                 <form><img src="/static/IMG/chat1.png"> <label>Language :</label><select><option>English</option><option>Japanese</option></select></form>
+                                </div>
+                                	<div class="logout">
+                                <a href="/logout/"><img src="/static/IMG/logout1.png"> Logout</a>
+                                </div>
+				
+            </div>
+    	</div>
+        
+        <!--left content-->
+        <div class="left-content">
+        	<div class="left-list"  id="left-element" align="left">
+            	<ul>
+                	<li><a href="/filesharing/"><img src="/static/IMG/filesharing.png"><span style="padding:0 10px;">File Sharing</span></a></li>
+                    <li><a href="/drives/"><img src="/static/IMG/drives.png"><span style="padding:0 10px;">Drives</span></a></li>
+                    <li><a href="/services/"><img src="/static/IMG/service.png"><span style="padding:0 10px;">Services</span></a></li>
+                    <li><a href="/webservices/"><img src="/static/IMG/webservices.png"><span style="padding:0 10px;">Web Services</span></a></li>
+                    <li><a href="/applications"><img src="/static/IMG/application.png"><span style="padding:0 10px;">Applications</span></a></li>
+                    <li><a href="/network/"><img src="/static/IMG/network.png"><span style="padding:0 10px;">Network</span></a></li>
+                    <li><a href="/backup/"><img src="/static/IMG/backup.png"><span class="link-active" style="padding:0 10px;">Backup</span></a></li>
+                    <li><a href="/management/"><img src="/static/IMG/management.png"><span style="padding:0 10px; ">Management</span></a></li>
+                    </ul>
+                    
+            </div>
+            
+            <div class="right-content" id="right-element">
+             	<div class="text"><b>Backup</b></div>
+                    <div class="form-content" align="center">
+                    	<div class="form-one">
+                        	<div class="box-one">
+                            	<div class="box-img-one"><img src="/static/IMG/folder-setup.png"></div>
+                                	<div class="folder-setup">Backup</div>
+                            			<div class="text-one">Inactive</div>
+                                			<div class="click-button">
+                                    			<span onclick="alert(&quot;Helloworld!&quot;)" class="add-ticket">
+                                                	<img src="/static/IMG/popup-icon.png" width="15" height="14" title="View" alt="Click" style="vertical-align:inherit;" />
+                                                </span>
+                                    		</div>
+                            </div>
+                            
+                            <div class="box-one" style="margin-top:2px;">
+                            	<div class="box-img-one"><img src="/static/IMG/user.png"></div>
+                                	<div class="folder-setup">Replication</div>
+                            			<div class="text-one">
+                                        </div>
+                                			<div class="click-button">
+                                    			<span onclick="alert(&quot;Helloworld!&quot;)" class="add-ticket">
+                                                <img src="/static/IMG/popup-icon.png" width="15" height="14" title="View" alt="Click" style="vertical-align:inherit;" />
+                                                </span>
+                                    		</div>
+                            </div>
+                            
+                            <div class="box-one" style="margin-top:2px;">
+                            	<div class="box-img-one"><img src="/static/IMG/groups.png"></div>
+                                	<div class="folder-setup">Failover</div>
+                            			<div class="text-one" style="font-size:9px;font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 			                                         sans-serif;">Standalone
+                                        </div>
+                                			<div class="click-button">
+                                    			<span onclick="alert(&quot;Helloworld!&quot;)" class="add-ticket">
+                                                	<img src="/static/IMG/popup-icon.png" width="15" height="14" title="View" alt="Click" style="vertical-align:inherit;" />
+                                                </span>
+                                    		</div>
+                            </div>
+                            
+                            <div class="box-one" style="margin-top:2px;" >
+                            	<div class="box-img-one"><img src="/static/IMG/dfs.png"></div>
+                                	<div class="folder-setup">Time Machine</div>
+                            			<div class="text-one">
+                                        	<div id="page">
+                                        	<input type="checkbox" id="switch8" />
+                                            </div>
+                                           </div>
+                                			<div class="click-button">
+                                    			<span onclick="alert(&quot;Helloworld!&quot;)" class="add-ticket">
+                                                	<img src="/static/IMG/popup-icon.png" width="15" height="14" title="View" alt="Click" style="vertical-align:inherit;" />
+                                                </span>
+                                    		</div>
+                            </div>
+                            
+                            <div class="box-one" style="margin-top:2px;" >
+                            	<div class="box-img-one"><img src="/static/IMG/dfs.png"></div>
+                                	<div class="folder-setup">Direct Copy</div>
+                            			<div class="text-one">
+                                        	<div id="page">
+                                            	<input type="checkbox" id="switch9" />
+                                             </div>
+                                             </div>
+                                			<div class="click-button">
+                                    			<span onclick="alert(&quot;Helloworld!&quot;)" class="add-ticket">
+                                                	<img src="/static/IMG/popup-icon.png" width="15" height="14" title="View" alt="Click" style="vertical-align:inherit;" />
+                                                </span>
+                                    		</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+ <!--footer section-->  
+<div id="footer">
+				<div class="footer-copy">
+                	© 2001-2015 Celestial Systems Pvt. Ltd. All Rights Reserved
+                </div>
+
+	 			<div class="footer-text" align="right">
+                    <a  href="#">Terms of Use</a>
+                    <span style="color:#FFFFFF;">|</span>
+                    <a href="#">Privacy Policy</a>
+                    <span style="color:#FFFFFF;">|</span>
+                    <a href="#">Contact Us</a>
+                </div>
+</div>
+
+
+<script type="text/javascript">
+$('#left-element').css('height',$('#right-element').css('height'))
+</script>
+
+
+</body>
+</html>

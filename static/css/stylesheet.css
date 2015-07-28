@@ -1,0 +1,611 @@
+@charset "utf-8";
+/* CSS Document */
+
+img
+{
+ vertical-align:middle;	
+	}
+
+body
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+.body-div
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	background-color:#fff;
+}
+.header-div
+	{
+	background-image:url(../IMG/logo.png);
+	background-repeat:no-repeat;
+	background-position:0 13px;
+	min-height:60px;
+	padding:0;
+	margin:0 auto;	
+	width:auto;
+	
+	}
+.faq
+	{
+	padding:20px 4px;
+	
+}
+	
+.faq > a
+	{
+	color:#999999;
+	text-decoration:none;
+	font-weight:bold;
+	margin-right:1%;
+	font-size:14px;	
+	}
+.main-body
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	 background: #015eac;
+}
+		
+.rolling-nav
+{
+	
+	min-height:35px;
+	margin:0 auto;	
+	max-width:1280px;
+	padding:0;
+	
+}
+.setting
+{
+	display:inline-table;
+	width:1%;
+	padding:0 1%;
+}
+.setting a{ text-decoration:none;color:#FFFFFF;}
+.tune
+{
+	display:inline-table;
+	width:1%;
+	padding-right:1%;
+}
+.tune a{ text-decoration:none;color:#FFFFFF;}
+.name
+{
+	display:inline-table;
+	width:24%;
+}
+.name p
+{
+	margin-top:8px;
+	color:#FFFFFF;
+	
+}
+.admin
+{
+	display:inline-table;
+	width:35%;
+}
+
+.language
+{
+	display:inline-table;
+	width:22%;
+	color:#FFFFFF;
+	text-align:right;
+	margin-right:1%;
+}
+.language label{ font-family: Arial, sans-serif;font-size:14px;}
+.language select
+{
+	background-color:#015eac;
+	color:#FFFFFF; 
+	border:none;
+    outline:none; 
+	appearance:none;
+ cursor:pointer;
+  
+ }
+ 
+ .language select option
+{
+	background-color:#ffffff;
+	color:#333333;
+	padding:2px 10px;
+	border:none;
+}
+.admin a{ text-decoration:none;color:#FFFFFF;font-family: Arial, sans-serif;font-size:14px;}
+.logout
+{
+	display:inline-table;
+	padding-right:1%;
+}
+.logout a{ text-decoration:none;color:#FFFFFF;font-family: Arial, sans-serif;font-size:14px;}
+
+.left-content
+{
+	width:100%;
+	margin:0;
+	padding:0;
+	background-color:#dadada;
+}
+.left-list
+{
+	margin:0;
+	width:20%;
+	display:inline-table;
+	background-color:#FFFFFF;
+	
+	vertical-align:top;
+}
+.left-list ul
+{
+	margin:0;
+	
+}
+.left-list li
+{
+	
+	 margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.left-list a {
+ 
+  color: #415464;
+  display: block;
+  margin: 0;
+  padding: 5px 2px;
+  text-decoration: none;
+  font-weight: normal;
+  font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  
+}
+.left-list a:hover, .link-active {
+  
+	 color:#015eac;
+}
+
+
+.right-content 
+{
+	display:inline-table;
+	width:79%;
+	margin:0;
+	}
+.text
+{
+	color:#415464;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:22px;
+	padding:10px 2%;
+}
+.form-content
+{
+	
+	margin:20px 0 0 60px;
+	
+}
+.box-one
+{
+	background-color:#FFFFFF;
+	border:2px solid #bdbebf;
+	display:block;
+	width:70%;
+	
+}
+.box-img-one
+{
+	display:inline-table;
+	padding:5px 1%;
+	vertical-align:middle;
+}
+.folder-setup
+{
+	display:inline-table;
+	padding:2px 1%;
+	color:#415464;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+	width:30%;
+	text-align:left;
+	vertical-align:middle;
+}
+.text-one
+{
+	display:inline-table;
+	margin-left:12%;
+	padding:2px 1%;
+	color:#415464;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+	width:20%;
+	vertical-align:middle;
+}
+.click-button
+{
+	display:inline-table;
+	margin-left:10%;
+	padding:2px 1%;
+	width:10%;
+	vertical-align:middle;
+	
+}
+.add-ticket
+{
+	background-color: #818181;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 3px 8px;
+	cursor:pointer;
+}
+
+#footer
+{
+	height:auto;
+	width:100%;
+	background:#015eac;
+}
+.footer-copy
+	{
+	width:47%;
+	display:inline-block;
+	font-size:10px;
+	color:#ffffff;	
+	}
+
+.footer-text
+{
+	width:50%;
+	display:inline-block;	
+	padding:5px 1%;
+	font-size:10px;
+}
+.footer-text a
+{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+.form-one
+	{
+		margin-bottom:20px;
+	}
+	
+/*Drop Down FAQ*/
+
+
+
+.dropmenu li {
+	width: 170px;
+}
+
+.dropmenu {
+	position: absolute;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	background-color: #fff;
+	padding:0;
+	margin:0;
+	text-align:left;
+	right:4%;
+	display:none;
+}
+
+.dropmenu li {
+	display: block;
+	float: none;
+	font-size: 13px;
+	text-decoration: none;
+	padding: 4px 0 4px 0;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.dropmenu li a {
+	display: block;
+	color: #777;
+	zoom: 1;
+	padding: 2px 0px 2px 32px;
+}
+
+/*Infromation */
+.dropdownbox {
+	position: absolute;
+	overflow: auto;
+	width: 305px;
+	max-height: 400px;
+	height: auto !important;
+	height: 400px;
+	padding: 10px;
+	right:2%;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	text-align:left;
+	color:#666666;
+	font-size:0.8em;
+	display:none;
+}
+
+.dropdownbox .status-error {
+	width: 258px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.status-systeminfo {
+	width: 258px;
+	padding-top: 10px;
+}
+.dropdownbox table {
+	width: 258px;
+}
+
+.dropdownbox table tr th {
+	width: 110px;
+	vertical-align: top;
+	border-top: 1px dotted #ccc;
+	padding: 10px 0;
+}
+.dropdownbox table tr td {
+	border-top: 1px dotted #ccc;
+	padding: 10px 0;
+}
+
+/*Popup Layers*/
+
+.x-window-default
+	{
+	background-color: #e8e8e8;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 4px;
+	font-size:0.9em;		
+	}
+	
+/*Root Page Design*/
+
+#main
+	{
+	background: #ffffff;
+	margin: 0 auto;
+	padding-top: 10px;
+	max-width: 960px;
+	color: #777;
+font-size: 12px;
+line-height: 1.5;		
+	}
+
+div#menu_box
+	{
+	
+	overflow-y: auto !important;
+	max-width: 960px !important;
+	}
+
+.settings
+	{
+	margin: 0 auto;
+	max-width: 950px;
+	}
+	
+.outer
+	{
+	background: #76b2f5;
+	display: inline;
+	float: left;
+	margin-left: 1%;
+	max-width: 25%;
+	border-radius:5px;
+	margin-bottom:20px;
+	}
+	
+.settings h2
+	{
+		background-position: left top;
+	background-repeat: no-repeat;
+	height: 65px;
+	line-height: 1;
+	}
+
+.description
+	{
+	font-size: 12px;
+	height: 70px;
+	line-height: 1.4;
+	margin-right: 6px;
+	overflow: auto;
+	padding: 4px 8px 0;		
+	}
+
+#top h1
+	{
+	font-size: 24px;
+margin-bottom: 12px;
+padding-top: 20px;
+text-align: center;
+color:#666666;	
+	}
+
+.settings h2 a
+	{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;	
+	text-decoration:none;
+	}
+
+.wizard
+	{
+		background-image: url("../img/top/fortera/btn.png");
+background-position: left top;
+background-repeat: no-repeat;
+width: 201px;
+	}
+	
+.detailbtn
+	{
+		background-image: #ffffff;
+background-position: left top;
+background-repeat: no-repeat;
+margin-left:1%;
+display: inline-table;
+width:20%;
+height:40px;
+	}
+
+.detailbtn > a
+	{
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;		
+	}
+	
+.setting-advance
+		{
+			background: #333333;
+height: 42px;
+line-height: 14px;
+margin: 0 auto;
+padding: 10px;
+vertical-align: middle;
+			}
+			
+#NAS_18_LABEL_DESCRIPTION
+	{
+	color:#8A8A8A;
+	font-size:12px;
+	display: inline-table;
+	padding: 0;
+text-align: left;
+width: 48%;
+	}
+	
+/*Web Access Settings*/
+
+#main #wizard
+	{
+	margin: -10px auto 0;
+	max-width: 750px;
+	}
+	
+#main #wizard h1
+	{
+	background: rgba(0, 0, 0, 0) url("../img/top/border.gif") no-repeat scroll left bottom;
+	margin-bottom: 1em;
+	padding-bottom: 6px;
+	}
+	
+#main #wizard .setup
+	{
+	margin: 0 auto;
+  	padding-bottom: 12px;
+ 	max-width: 567px;
+}
+#main #wizard .text {
+  margin-bottom: 1em;
+}
+
+#main #wizard .buttons .left {
+  float: left;
+  max-width: 300px;
+}
+
+ #main #wizard .buttons .right {
+  float: right;
+  max-width: 450px;
+}
+
+#main #wizard .buttons .right li {
+  display: inline;
+  float: right;
+}
+
+ #main #wizard .buttons .bgbtn a {
+  background: #333333;
+  border-radius:5px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 26px;
+  margin-left: 5px;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 102px;
+}
+
+.displayCls {
+  color: #777777;
+  margin-top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) 
+	{
+	.box-one
+		{
+		width:90%;	
+		}
+	}
+	
+@media screen and (max-width:800px) 
+	{
+		
+	.right-content
+		{
+		display:block;
+		width:100%;
+		align-content:center;		
+		}
+		
+	.form-content
+		 {
+ 		 margin: 20px 0 0 0px;
+		}
+		
+	.left-list
+		{
+		display:none;
+		position:absolute;
+		z-index:10;		
+		}	
+		
+	.box-one
+		{
+		width:98%;
+		padding:0;
+		margin:0	
+		}
+	}

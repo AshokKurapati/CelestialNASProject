@@ -1,0 +1,40 @@
+[celestial333@localhost disk]$ sudo ./interface -D
+[sudo] password for celestial333: 
+cat: /sys/class/net/eth0/address: No such file or directory
+cat: /sys/class/net/eth0/address: No such file or directory
+cat: /sys/class/net/eth0/address: No such file or directory
+cat: /sys/class/net/eth0/address: No such file or directory
+{
+    "DISK1": {
+	"name": "DISK1",
+	"size": "1000GB",
+	"status": "Foreign",
+	"vendor": "ST1000DM003-1ER1CC45",
+	"volume": "Unassigned" 
+    },
+    "DISK2": {
+	"name": "DISK2",
+	"size": "1000GB",
+	"status": "Foreign",
+	"vendor": "ST1000DM003-1ER1CC45",
+	"volume": "Unassigned" 
+    },
+    "DISK3": {
+	"name": "DISK3",
+	"size": "1000GB",
+	"status": "Normal",
+	"vendor": "ST1000DM003-1ER1CC45",
+	"volume": "Unassigned" 
+    },
+    "DISK4": {
+	"name": "DISK4",
+	"size": "1000GB",
+	"status": "Normal",
+	"vendor": "ST1000DM003-1ER1CC45",
+	"volume": "Unassigned" 
+    },
+
+}
+
+[celestial333@localhost disk]$ 
+

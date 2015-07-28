@@ -1,0 +1,30 @@
+{
+	"sharedfolder":
+	{
+		
+		"description": "ss", 
+		"volumeName": "volume4", 
+		"ownername": "amit", 
+		"uniqueID": "0", 
+		"services":
+		{
+			"wiki":"no",
+			"cifs":"no",
+			"ftp":"no",
+			"nfs":"yes",
+			"rb":"yes",
+			"ms":"no",
+			"afp":"no",
+			"webdav":"no",
+			"encrypt":"no"
+		}, 
+		"backup": 
+		{
+			"rName":"s",
+			"rPasswd":"s"
+		}, 
+		"public": "no", 
+		"name": "ss"
+		
+	}
+}

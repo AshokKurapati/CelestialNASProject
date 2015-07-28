@@ -1,0 +1,83 @@
+{% load staticfiles %}
+<!doctype html>
+ {% csrf_token %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>Loginpage</title>
+<link rel="shortcut icon" href="{% static '/static/IMG/celes-meta-icon.png' %}">
+<link rel="stylesheet" type="text/css" href="{% static '/static/css/style.css' %}">
+<!--<script type="text/javascript">
+function login(){ 
+  //alert("Click");
+  
+  var username=document.getElementById('user').value;
+  var password=document.getElementById('pass').value;
+  
+    if ( username == "admin" && password == "password" ){
+ 	//alert ("Login successfully");
+   window.location = "share/filesharing.html"; // Redirecting to other page.
+   return false;
+   }
+  
+   
+ else
+   {
+   alert("Please enter Valid User ID and Password");
+   }
+  
+ }
+ </script>-->
+<style>
+.messages{position:relative;color:red;font-size:16px;margin-left:10px;font-family:vardhana;font-weight:bold;}
+</style>
+</head>
+
+<body>
+<div id="container">
+<!--login page--->
+	<div class="content" align="center">
+    <p style="margin:0;padding:10px;color:#FFFFFF;font-family:Arial, sans-serif;" align="left">Enter Username and Password</p>
+    	<div class="border-content" align="center">
+        <form action="/dashboard/" method="post">
+                {% csrf_token %}
+         <div class="login">
+				{% if messages %}
+				<div class="messages">
+					{% for message in messages %}
+						<span{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</span>
+					{% endfor %}
+				</div>
+			    {% endif %}
+        	<p class="remember_me" align="left">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Log in as a different user
+          </label>
+        </p>
+
+            <p style="margin-left:20px;font-family:Arial, sans-serif;font-size:15px;" align="left">Username: <input type="text" name="username" id="user" value="" placeholder="admin"></p>
+        	<p style="margin-left:20px;font-family:Arial, sans-serif;font-size:15px;" align="left">Password: <input type="password" name="password" id="pass" value="" onkeydown="if (event.keyCode == 13) document.getElementById('signin-btn').click()" placeholder="Password"></p>
+            <p style="margin-left:20px;font-family:Arial, sans-serif;font-size:15px;" align="left">Time-out Period: <input type="radio" name="time" value="10 Minutes">10 Minutes
+<input type="radio" name="time" value="Unlimited">Unlimited</p>
+
+            
+    	</div>
+        	<div class="button-container" align="left">
+				<p style="display:inline-table;width:60%;"><a href="#" class="btn">Secure Connection</a></p>
+                <p style="display:inline-table;margin-right:10px;padding:0;">
+                	<!--<a href="#" class="btn" id="signin-btn" style="padding: 5px 25px;margin:0;" onClick="login();">OK</a>-->
+                        <input class="btn" style="padding: 5px 25px;margin:0;" type="submit" value="OK" id="login">
+                	<a href="#" class="btn" style="padding: 5px 25px;margin:0;">Easy Admin</a>
+                </p>
+            </div>
+         </div>
+       </form>
+
+	</div>
+     
+    		<!---buttons-->
+            
+</div>
+</body>
+</html>
